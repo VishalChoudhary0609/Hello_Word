@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Homeactivity">
+
+
+
+    <FrameLayout
+
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/colorWhite"
+            android:elevation="100dp"
+            android:gravity="center"
+            android:outlineSpotShadowColor="@android:color/black"
+            app:fabAlignmentMode="center"
+            app:fabCradleRoundedCornerRadius="25dp"
+            app:hideOnScroll="true"
+
+            app:layout_scrollFlags="scroll|enterAlways"
+
+
+            >
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp"
+
+                android:weightSum="5">
+
+
+                <ImageButton
+                    android:id="@+id/contest_btn_id"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/colorTransparent"
+                    android:onClick="contest_clicked"
+                    android:scaleType="center"
+                    android:src="@drawable/contest_selector" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorTransparent"
+                        android:onClick="emptybtn_clicked" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorTransparent"
+                        android:clickable="false" />
+
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@+id/profile_btn_id"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/colorTransparent"
+                    android:onClick="profile_clicked"
+                    android:scaleType="center"
+                    android:src="@drawable/profile_selector" />
+
+
+            </LinearLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/home_floating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:foreground="@drawable/home_selector"
+            android:onClick="home_clicked"
+            android:scaleType="centerCrop"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:maxImageSize="@android:dimen/notification_large_icon_height" />
+
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

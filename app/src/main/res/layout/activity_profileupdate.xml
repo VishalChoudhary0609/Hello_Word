@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/backappmain"
+    android:layout_height="match_parent"
+    tools:context=".profileupdate">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_group_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textSize="22sp"
+        android:text="I am"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/entername_edittextid"
+        app:layout_constraintStart_toStartOf="@+id/entername_edittextid" />
+
+    <EditText
+        android:id="@+id/entername_edittextid"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="50dp"
+        android:layout_height="71dp"
+        android:background="@drawable/textviewstyling"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:text=""
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="2dp"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/selectyear_spinnerid"
+        app:layout_constraintStart_toStartOf="@+id/selectyear_spinnerid" />
+
+    <Spinner
+        android:id="@+id/selectyear_spinnerid"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="2dp"
+        android:background="@drawable/textviewstyling"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/entername_edittextid"
+        app:layout_constraintStart_toStartOf="@+id/entername_edittextid"
+        app:layout_constraintTop_toBottomOf="@+id/entername_edittextid"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <Button
+        android:id="@+id/getstarted_btnid"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:background="@drawable/shader"
+        android:text="Save Info"
+        android:textColor="@color/colorWhite"
+        android:textSize="22dp"
+        android:onClick="savechanges"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/entername_edittextid"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/entername_edittextid"
+        app:layout_constraintTop_toBottomOf="@+id/selectyear_spinnerid"
+        app:layout_constraintVertical_bias="0.298" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

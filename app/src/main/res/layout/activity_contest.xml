@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backappmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contestActivity">
+
+
+
+
+    <TextView
+        android:id="@+id/contestwriiten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/questioncard"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorvoiletDark"
+        android:layout_marginBottom="30dp"
+        android:text="Contest"
+        android:textSize="50sp" />
+
+
+    <LinearLayout
+
+        android:visibility="invisible"
+        android:id="@+id/scorelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/questioncard">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/questioncard"
+            android:text="SCORE : "
+            android:textSize="50sp" />
+        <TextView
+            android:id="@+id/urscoretextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/questioncard"
+            android:text="0 "
+            android:textSize="50sp" />
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:visibility="invisible"
+        android:id="@+id/questioncard"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="25dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/questextview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:text="question"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/optionA"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:textAlignment="textStart"
+                android:layout_margin="10dp"
+                android:background="@drawable/textviewstyling"
+                android:padding="10dp"
+                android:textSize="20dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="optionA"/>
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/optionB"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textviewstyling"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textAlignment="textStart"
+                android:maxLines="2"
+                android:text="optionB"/>
+            <Button
+                android:id="@+id/optionC"
+                android:layout_width="match_parent"
+                android:textAlignment="textStart"
+                android:textSize="20dp"
+                android:maxLines="2"
+                android:layout_margin="10dp"
+                android:background="@drawable/textviewstyling"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:text="optionC"/>
+            <Button
+                android:id="@+id/optionD"
+                android:layout_width="match_parent"
+                android:maxLines="2"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:background="@drawable/textviewstyling"
+                android:padding="10dp"
+                android:textAlignment="textStart"
+                android:layout_height="wrap_content"
+                android:text="optionD"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorvoiletDark"
+        android:progressTint="@color/colorvoiletDark"
+        android:layout_centerInParent="true"
+        android:elevation="26dp"
+        android:visibility="visible" />
+    <Button
+        android:id="@+id/reviewbtn"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:layout_height="71dp"
+        android:transitionName="gotoreviewtransition"
+        android:onClick="openreviewpage"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/shader"
+        android:text="Review"
+        android:textColor="@color/colorWhite"
+        android:textSize="22dp"
+        android:layout_below="@id/questioncard"
+        android:maxLines="2" />
+
+    <LinearLayout
+
+        android:visibility="invisible"
+        android:id="@+id/finalscorelayout"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/correctquestions"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorvoiletDark"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/questioncard"
+            android:text=""
+            android:textSize="100sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorvoiletDark"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/questioncard"
+            android:text=" / "
+            android:textSize="100sp" />
+        <TextView
+            android:id="@+id/totalquestionstextview"
+            android:textColor="@color/colorvoiletDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/questioncard"
+            android:text="0 "
+            android:textSize="100sp" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
